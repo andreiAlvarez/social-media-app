@@ -8,22 +8,22 @@ module.exports = gql`
     username: String!
   }
   type User {
-      id: ID!
-      email: String!
-      token: String!
-      username: String!
-      createdAt: String!
+    id: ID!
+    email: String!
+    token: String!
+    username: String!
+    createdAt: String!
   }
-  input registerInput{
-      username: String!
-      password: String!
-      confirmPassword: String!
-      email: String!
+  input registerInput {
+    username: String!
+    password: String!
+    confirmPassword: String!
+    email: String!
   }
   type Query {
     getPosts: [Post]
   }
-  type Mutation{
-      register(registerInput: registerInput)
+  type Mutation {
+    register(registerInput: registerInput): User!
   }
 `;
